@@ -1,11 +1,11 @@
-s = str(input())
-if len(s)>1:
-  if s[0].isupper() and s[1:].islower():
+S = input()
+
+if S[0].isupper():
+  if len(S)==1:
+    print("Yes")
+  elif S[1:].islower():
     print("Yes")
   else:
     print("No")
-if len(s)==1:
-  if s[0].isupper():
-    print("Yes")
-  else:
-    print("No")
+else:
+  print("No")
