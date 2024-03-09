@@ -1,18 +1,16 @@
-N, X= map(int, input().split())
+N, X = map(int, input().split())
 A = list(map(int, input().split()))
 
-discovered = False
-R = len(A)-1
 L = 0
-M = (R+L)//2
+R = N-1
 
-while not discovered:
-  if X<A[M]:
-    R = M-1
-  elif X==A[M]:
-    print(M+1)
-    discovered = True
-  else:
+while True:
+  M = (L+R)//2
+  if A[M]<X:
     L = M+1
-  M = (R+L)//2
-    
+  elif A[M]>X:
+    R = M-1
+  else:
+    print(M+1)
+    break
+  
